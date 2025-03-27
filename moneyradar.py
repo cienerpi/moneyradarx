@@ -297,7 +297,7 @@ def main():
     application.add_handler(CommandHandler("rate", rate_command))
     application.add_handler(CommandHandler("start", start))
     tz = pytz.timezone('Europe/Kiev')
-    application.job_queue.run_daily(scheduled_currency_rate, time(hour=13, minute=20, tzinfo=tz))
+    application.job_queue.run_daily(scheduled_currency_rate, time(hour=13, minute=00, tzinfo=tz))
     application.run_polling()
 
 if __name__ == "__main__":
